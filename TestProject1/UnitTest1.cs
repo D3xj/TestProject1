@@ -15,7 +15,7 @@ namespace TestProject1
         private By afterfirstClick = By.XPath("//span[text()='Прогноз погоды на 5 дней']");
 
         [TestInitialize]
-        public void setuptest()
+        public void SetupTest()
         {   
             driver = new ChromeDriver();
             baseURL = "https://meteo.paraplan.net/ru/";
@@ -34,7 +34,7 @@ namespace TestProject1
         }
 
         [TestCleanup]
-        public void testcleanup()
+        public void TestCleanup()
         {
             driver.Close();
             driver.Quit();
